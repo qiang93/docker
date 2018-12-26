@@ -83,7 +83,7 @@ RUN cd /tmp/php-$PHP_VERSION && \
 FROM centos:7.6.1810
 ENV PATH /usr/local/php7/bin:$PATH
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-RUN useradd -M www -s /sbin/nologin && mkdir -p /var/web/{logs,www}
+RUN useradd -M www -s /sbin/nologin && mkdir -p /var/web/www
 RUN curl -O https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
     && pip install supervisor \
