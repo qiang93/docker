@@ -1,6 +1,3 @@
-#使用方法:
-#构建镜像：docker build -t 192.168.3.198/ismond/nginx:1.12 .
-#docker run -d -p 80:80 --name web01 -v vhosts.conf:/usr/local/openresty/nginx/conf/vhosts/vhosts.conf 192.168.3.198/ismond/nginx:1.12
 FROM centos:7.6.1810 AS build-env
 MAINTAINER huqiang:2018/4/18
 ENV NGINX_VERSION 1.13.6.2
