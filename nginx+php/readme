@@ -1,0 +1,6 @@
+php.ini配置文件为development环境
+
+run:
+	docker run -itd -e PARAMS='php' harbor.ddtester.com/base_image/lnp:v2.0
+ 	
+	PARAMS:传递启动哪个服务进程参数{nginx\php}
