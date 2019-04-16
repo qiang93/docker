@@ -101,6 +101,7 @@ ENV PATH /usr/local/php7/bin:$PATH
 ENV PARAMS ""
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN useradd -M www -s /sbin/nologin && mkdir -p /var/web/www && mkdir -p /var/log/nginx && mkdir -p /usr/local/openresty/nginx/conf/vhosts
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && pip install awscli && rm -rf /root/get-pip.py /root/.cache
 
 COPY --from=build-env  /usr/local/openresty /usr/local/openresty
 
