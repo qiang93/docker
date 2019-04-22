@@ -1,0 +1,13 @@
+说明:
+该镜像同时包含nginx+php,参考传入参数变量启动不同服务
+
+扩展:
+centos版本为编译安装,添加扩展需要修改Dockerfile,修改版本和扩展
+debian版本为docker官方Dockerfile改进,添加扩展可阅读此帮助文档:https://docs.docker.com/samples/library/php/
+
+使用:
+Build
+	docker build -t lnp:1.1 .
+
+Run
+	参考example文件示例docker-compose

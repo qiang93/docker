@@ -1,0 +1,29 @@
+version: '3'
+services:
+  nginx:
+    image: harbor.ddtester.com/base_image/lnp:test
+    depends_on:
+      - "php"
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+       PARAMS: nginx
+    networks:
+      - "lnmp"
+    volumes:
+      - "./conf/vhost.conf:/usr/local/openresty/nginx/conf/vhosts/vhost.conf"
+
+  php:
+    image: harbor.ddtester.com/base_image/lnp:test
+    ports:
+      - "9000:9000"
+    restart: always
+    environment:
+       PARAMS: php
+    networks:
+      - "lnmp"
+
+networks:
+  lnmp:
+    driver: bridge

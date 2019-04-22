@@ -1,7 +1,0 @@
-php.ini配置文件为development环境
-build:
-
-	docker build -t php:7.1.18 .
-
-run:
-	docker run -itd -p 9000:9000 --name php php:7.1.18
