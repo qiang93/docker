@@ -3,6 +3,7 @@
 
 扩展:
 centos版本为编译安装,添加扩展需要修改Dockerfile,修改版本和扩展
+
 debian版本为docker官方Dockerfile改进,添加扩展可阅读此帮助文档:https://docs.docker.com/samples/library/php/
 
 使用:
