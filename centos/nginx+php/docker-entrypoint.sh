@@ -5,7 +5,7 @@ if [[ "${PARAMS}" == "nginx" ]]; then
 	chown -R www.www /var/web
 	find /var/web/www -type d -exec chmod 750 {} \;
 	find /var/web/www -not -type d -exec chmod 640 {} \;
-	/usr/local/openresty/nginx/sbin/nginx -g "daemon off;"
+	/usr/local/openresty/bin/openresty -g "daemon off;"
 
 fi
 
@@ -13,6 +13,6 @@ if [[ "${PARAMS}" == "php" ]]; then
 	chown -R www.www /var/web
 	find /var/web/www -type d -exec chmod 750 {} \;
 	find /var/web/www -not -type d -exec chmod 640 {} \;
-	/usr/local/php7/sbin/php-fpm -y /usr/local/php7/etc/php-fpm.conf
+	/usr/local/php7/sbin/php-fpm -y /usr/local/etc/php/php-fpm.conf
 fi
 exec "$@"

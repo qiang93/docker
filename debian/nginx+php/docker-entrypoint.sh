@@ -4,7 +4,7 @@ if [[ "${PARAMS}" == "nginx" ]]; then
         find /var/web/www -type d -exec chmod 750 {} \;
         find /var/web/www -not -type d -exec chmod 640 {} \;
         find /var/web/www -name "storage" -type d -exec chmod -R 777 {} \;
-        /usr/local/openresty/nginx/sbin/nginx -g "daemon off;"
+        /usr/local/openresty/bin/openresty -g "daemon off;"
 
 fi
 
