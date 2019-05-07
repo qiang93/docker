@@ -262,9 +262,8 @@ COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-STOPSIGNAL SIGQUIT
 WORKDIR /var/web/www
 
-EXPOSE 9000 80
-
 ENTRYPOINT ["docker-entrypoint.sh"]
+
+EXPOSE 9000 80
